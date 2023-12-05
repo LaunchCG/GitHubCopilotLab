@@ -1,0 +1,741 @@
+{
+	"info": {
+		"_postman_id": "1a5f32d4-ab13-4f4a-848c-a45e9b592d83",
+		"name": "SALearning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6682401"
+	},
+	"item": [
+		{
+			"name": "Alpha",
+			"item": [
+				{
+					"name": "Get Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SA_ALPHAHOST}}/api/price/info/:symbol",
+							"host": [
+								"{{SA_ALPHAHOST}}"
+							],
+							"path": [
+								"api",
+								"price",
+								"info",
+								":symbol"
+							],
+							"variable": [
+								{
+									"key": "symbol",
+									"value": "tsla"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SA_ALPHAHOST}}/api/version",
+							"host": [
+								"{{SA_ALPHAHOST}}"
+							],
+							"path": [
+								"api",
+								"version"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Prices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SA_ALPHAHOST}}/api/price/range/:symbol?startdate=11-1-2022&enddate=11-30-2022",
+							"host": [
+								"{{SA_ALPHAHOST}}"
+							],
+							"path": [
+								"api",
+								"price",
+								"range",
+								":symbol"
+							],
+							"query": [
+								{
+									"key": "startdate",
+									"value": "11-1-2022"
+								},
+								{
+									"key": "enddate",
+									"value": "11-30-2022"
+								}
+							],
+							"variable": [
+								{
+									"key": "symbol",
+									"value": "tsla"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StockPortfolio",
+			"item": [
+				{
+					"name": "Application",
+					"item": [
+						{
+							"name": "Get API Version",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/application/version",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"application",
+										"version"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Profiles",
+					"item": [
+						{
+							"name": "Create Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/profile",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Profiles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/profile",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Profile",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/profile/:email",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"profile",
+										":email"
+									],
+									"variable": [
+										{
+											"key": "email",
+											"value": "joewelch@msn.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Profile",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\" : \"joewelch@msn.com\",\r\n    \"Name\" : \"Joe Welch\",\r\n    \"Description\" : \"Brand New Account\",\r\n    \"AccountType\" : \"CUSTOM\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/profile/:email",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"profile",
+										":email"
+									],
+									"variable": [
+										{
+											"key": "email",
+											"value": "joewelch@msn.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/profile/:email",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"profile",
+										":email"
+									],
+									"variable": [
+										{
+											"key": "email",
+											"value": "joewelch@msn.com"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Operations",
+					"item": [
+						{
+							"name": "Create Operation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"OperationType\" : 0,\r\n    \"Symbol\" : \"MSFT\",\r\n    \"Shares\" : 3.0,\r\n    \"Amount\" : 525.23,\r\n    \"TransactDate\" : \"2022-05-13\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/operation",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"operation"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Operation List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/operation",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"operation"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Operation",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/operation/:opId",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"operation",
+										":opId"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										},
+										{
+											"key": "opId",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Operation",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"operationId\": 2,\r\n    \"operationType\": 0,\r\n    \"symbol\": \"MSFT\",\r\n    \"shares\": 5.0,\r\n    \"amount\": 625.23,\r\n    \"transactDate\": \"2022-05-13T00:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/operation/:opId",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"operation",
+										":opId"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										},
+										{
+											"key": "opId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Operation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/operation/:opId",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"operation",
+										":opId"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										},
+										{
+											"key": "opId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Holdings",
+					"item": [
+						{
+							"name": "Create Holding",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Symbol\" : \"MSFT\",\r\n    \"Shares\" : 10.0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/holding",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"holding"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Holding List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/holding",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"holding"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Holding",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/Holding/:symbol",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"Holding",
+										":symbol"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										},
+										{
+											"key": "symbol",
+											"value": "AAPL"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Holding",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Symbol\" : \"MSFT\",\r\n    \"Shares\" : 23\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/holding/:symbol",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"holding",
+										":symbol"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										},
+										{
+											"key": "symbol",
+											"value": "MSFT"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Holding",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum/holding/:symbol",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum",
+										"holding",
+										":symbol"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										},
+										{
+											"key": "symbol",
+											"value": "MSFT"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Accounts",
+					"item": [
+						{
+							"name": "Get Account List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FirstName\" : \"Joe\",\r\n    \"LastName\" : \"Welch\",\r\n    \"Email\" : \"joewelch@msn.com\",\r\n    \"Description\" : \"Joe's First Account\",\r\n    \"Balance\" : 2500.00\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Account",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Account",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"AccountNumber\" : 2,\r\n    \"FirstName\" : \"Joe\",\r\n    \"LastName\" : \"Welch\",\r\n    \"Email\" : \"joewelch@msn.com\",\r\n    \"Name\" : \"Account #1\",\r\n    \"Description\" : \"Joe's Account 2 modified\",\r\n    \"Balance\" : 0.0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Account",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SALEARNINGHOST}}/api/account/:AccountNum",
+									"host": [
+										"{{SALEARNINGHOST}}"
+									],
+									"path": [
+										"api",
+										"account",
+										":AccountNum"
+									],
+									"variable": [
+										{
+											"key": "AccountNum",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Alpha External",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

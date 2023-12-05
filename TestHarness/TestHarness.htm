@@ -1,0 +1,37 @@
+<html>
+<body>
+    <h1>Nightly Test Results</h1>
+
+    <table id="dataTable" border="1px" width="90%">
+        <tr>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Environment</th>
+        </tr>
+    </table>
+
+    <script src="TestData.js"></script>
+    <script>
+        const table = document.getElementById("dataTable");
+        const cols = ["Date", "Status", "Description", "Environment"];
+        // const data = [
+        //     { "Date": "9/10/2022", "Status": "PASS", "Description" : "Nightly Test", "Environment" : "QA"},
+        //     { "Date": "9/11/2022", "Status": "FAIL", "Description" : "Nightly Test", "Environment" : "QA"},
+        //     { "Date": "9/12/2022", "Status": "PASS", "Description" : "Nightly Test", "Environment" : "QA"},
+        //     { "Date": "9/12/2022", "Status": "FAIL", "Description" : "Nightly Test", "Environment" : "QA"}
+        // ];
+
+        for (let i = 0; i < data.length; i++)
+        {
+            let tr = table.insertRow(-1);
+            for (let j = 0; j < 4; j++)
+            {
+                let cell = tr.insertCell(-1);
+                cell.innerHTML = data[i][cols[j]];
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net7.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/f2659ccb-d787-40ab-b162-fb4d26a9fdf6/AppServices/subscriptions/f2659ccb-d787-40ab-b162-fb4d26a9fdf6/resourceGroups/JoeLearning/providers/Microsoft.Web/sites/jwsastockprice"
+}

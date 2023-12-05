@@ -1,0 +1,38 @@
+data = [
+  {
+    "Status": "PASS",
+    "Description": "Nightly Test",
+    "Environment": "QA",
+    "Date": "2022-09-22T14:42:25.0390899-07:00"
+  },
+  {
+    "Status": "PASS",
+    "Description": "Nightly Test",
+    "Environment": "QA",
+    "Date": "2022-09-22T14:43:03.738485-07:00"
+  },
+  {
+    "Status": "FAIL",
+    "Description": "Nightly Test",
+    "Environment": "QA",
+    "Date": "2022-09-22T14:43:27.7603237-07:00"
+  },
+  {
+    "Status": "PASS",
+    "Description": "Nightly Test",
+    "Environment": "QA",
+    "Date": "2022-09-22T14:48:16.8157451-07:00"
+  },
+  {
+    "Status": "FAIL",
+    "Description": "Nightly Test",
+    "Environment": "QA",
+    "Date": "2022-09-22T14:49:00.9481666-07:00"
+  },
+  {
+    "Status": "PASS",
+    "Description": "Nightly Test",
+    "Environment": "QA",
+    "Date": "2022-09-22T14:49:35.6017724-07:00"
+  }
+]
